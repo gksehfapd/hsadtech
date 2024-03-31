@@ -5,7 +5,6 @@ export default function Home() {
 	return (
 		<div>
 			<Layout className="flex justify-around">
-				<div></div>
 				<div className="w-1/3 p-6 flex flex-col justify-center items-center text-5xl">
 					<div className="flex flex-col text-purple-900 w-2/3">
 						<span>DIGITAL</span>
@@ -75,7 +74,6 @@ export default function Home() {
 						</HomeItem>
 					</ul>
 				</div>
-				<div></div>
 			</Layout>
 		</div>
 	)

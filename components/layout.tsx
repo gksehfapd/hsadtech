@@ -47,7 +47,9 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 					</ul>
 				</div>
 			</nav>
-			<div className={cls('pt-14 min-h-screen pb-72', className)}>{children}</div>
+			<div className={cls('pt-14 min-h-screen pb-72')}>
+				<div className={className}>{children}</div>
+			</div>
 			<footer className="bg-zinc-800 text-gray-500 flex flex-col w-full absolute bottom-0">
 				<div className="flex p-6 justify-around">
 					<div className="w-1/4">
