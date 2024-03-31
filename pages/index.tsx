@@ -21,57 +21,18 @@ export default function Home() {
 				</div>
 				<div className="w-1/2 p-6 justify-center items-center flex text-lg">
 					<ul className="flex flex-col w-full">
-						<HomeItem text="㈜HSADTECH_ADRPMALL">
-							<span>회</span>
-							<span>사</span>
-							<span>명</span>
-						</HomeItem>
-						<HomeItem text="광고업 및 중소기업">
-							<span>업</span>
-							<span>종</span>
-							<span>및</span>
-							<span>기</span>
-							<span>업</span>
-							<span>구</span>
-							<span>분</span>
-						</HomeItem>
-						<HomeItem text="2023년 10월">
-							<span>설</span>
-							<span>립</span>
-							<span>예</span>
-							<span>정</span>
-							<span>일</span>
-						</HomeItem>
-						<HomeItem text="5명">
-							<span>직</span>
-							<span>원</span>
-							<span>수</span>
-						</HomeItem>
-						<HomeItem text="2,500만원">
-							<span>자</span>
-							<span>본</span>
-							<span>금</span>
-						</HomeItem>
-						<HomeItem text="55억원 (2024년 예상매출)">
-							<span>예</span>
-							<span>상</span>
-							<span>매</span>
-							<span>출</span>
-							<span>액</span>
-						</HomeItem>
-						<HomeItem text="서울특별시 성동구 상원1길 25 SOL빌딩 4층">
-							<span>주</span>
-							<span>소</span>
-						</HomeItem>
-						<HomeItem text="02-462-2384">
-							<span>연</span>
-							<span>락</span>
-							<span>처</span>
-						</HomeItem>
-						<HomeItem text="0504-001-2384">
-							<span>팩</span>
-							<span>스</span>
-						</HomeItem>
+						<HomeItem text="㈜HSADTECH_ADRPMALL" splitItem="회사명" />
+						<HomeItem text="광고업 및 중소기업" splitItem="업종및기업구분" />
+						<HomeItem text="2023년 10월" splitItem="설립예정일" />
+						<HomeItem text="5명" splitItem="직원수" />
+						<HomeItem text="2,500만원" splitItem="자본금" />
+						<HomeItem text="55억원 (2024년 예상매출)" splitItem="예상매출액" />
+						<HomeItem
+							text="서울특별시 성동구 상원1길 25 SOL빌딩 4층"
+							splitItem="주소"
+						/>
+						<HomeItem text="02-462-2384" splitItem="연락처" />
+						<HomeItem text="0504-001-2384" splitItem="팩스" />
 					</ul>
 				</div>
 			</Layout>
