@@ -10,11 +10,12 @@ interface LayoutProps {
 
 export default function Layout({ children, className = '' }: LayoutProps) {
 	const [scroll, setScroll] = useState(false)
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll)
 		return () => {
-			window.removeEventListener('scroll', handleScroll) //clean up
+			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [])
 
@@ -25,7 +26,7 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 		<div className="min-h-screen relative">
 			<nav
 				className={cls(
-					'flex justify-center w-full items-center fixed top-0 text-base px-16 py-3 text-black box-border z-99 bg-white',
+					'flex w-full items-center fixed top-0 text-base px-16 py-3 text-black box-border z-99 bg-white',
 					scroll ? 'border-b-2' : ''
 				)}
 			>
@@ -37,14 +38,48 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 					</div>
 				</div>
 
-				<div className="flex items-center w-1/2">
-					<ul className="flex w-full justify-between">
+				<div className="flex items-center w-1/2 relative">
+					<ul className="flex w-full justify-between max-md:hidden">
 						<NavItem text="Home" hoverText="홈" href="/" />
 						<NavItem text="About Us" hoverText="HS Comm" href="/aboutus" />
 						<NavItem text="Affliate" hoverText="제휴" href="/affliate" />
 						<NavItem text="Costomer" hoverText="고객사" href="/customer" />
 						<NavItem text="Contact" hoverText="문의하기" href="/contactus" />
 					</ul>
+					<div className="min-[768px]:hidden w-full flex justify-between">
+						{isMenuOpen ? (
+							<div>
+								<ul className="flex flex-col w-full justify-between bg-white fixed top-0 right-0 py-12 items-center border-b-2">
+									<NavItem text="Home" hoverText="홈" href="/" />
+									<NavItem text="About Us" hoverText="HS Comm" href="/aboutus" />
+									<NavItem text="Affliate" hoverText="제휴" href="/affliate" />
+									<NavItem text="Costomer" hoverText="고객사" href="/customer" />
+									<NavItem
+										text="Contact"
+										hoverText="문의하기"
+										href="/contactus"
+									/>
+									<NavItem
+										text="X"
+										hoverText="뒤로가기"
+										onClick={() => setIsMenuOpen(false)}
+									/>
+								</ul>
+							</div>
+						) : (
+							<div className="flex w-full justify-between">
+								<div></div>
+								<div
+									className="p-4 h-14 cursor-pointer flex flex-col justify-between"
+									onClick={() => setIsMenuOpen(true)}
+								>
+									<div className="border-black border-b-4 bg-black w-6"></div>
+									<div className="border-black border-b-4 bg-black w-6"></div>
+									<div className="border-black border-b-4 bg-black w-6"></div>
+								</div>
+							</div>
+						)}
+					</div>
 				</div>
 			</nav>
 			<div className={cls('pt-14 min-h-screen pb-72')}>
