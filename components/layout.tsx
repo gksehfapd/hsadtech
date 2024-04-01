@@ -43,7 +43,7 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 						<NavItem text="About Us" hoverText="HS Comm" href="/aboutus" />
 						<NavItem text="Affliate" hoverText="제휴" href="/affliate" />
 						<NavItem text="Costomer" hoverText="고객사" href="/customer" />
-						<NavItem text="Contact" hoverText="문의하기" href="/customer" />
+						<NavItem text="Contact" hoverText="문의하기" href="/contactus" />
 					</ul>
 				</div>
 			</nav>
