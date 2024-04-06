@@ -19,7 +19,8 @@ export default function Home() {
 						</span>
 					</div>
 				</div>
-				<div className="w-1/2 max-md:w-full p-6 justify-center items-center flex text-lg">
+
+				<div className="w-1/2 max-md:w-full p-6 justify-center items-center flex text-lg max-md:text-base">
 					<ul className="flex flex-col w-full">
 						<HomeItem text="㈜HSADTECH_ADRPMALL" splitItem="회사명" />
 						<HomeItem text="광고업 및 중소기업" splitItem="업종및기업구분" />

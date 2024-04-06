@@ -26,7 +26,7 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 		<div className="min-h-screen relative">
 			<nav
 				className={cls(
-					'flex w-full items-center fixed top-0 text-base px-16 py-3 text-black box-border z-99 bg-white',
+					'flex w-full items-center fixed top-0 text-base px-16 max-md:px-10 py-3 text-black box-border z-99 bg-white',
 					scroll ? 'border-b-2' : ''
 				)}
 			>
