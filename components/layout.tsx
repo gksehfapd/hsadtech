@@ -82,20 +82,22 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 					</div>
 				</div>
 			</nav>
-			<div className={cls('pt-14 min-h-screen pb-72')}>
+			<div className={cls('pt-14 min-h-screen pb-72 max-md:pb-80')}>
 				<div className={className}>{children}</div>
 			</div>
 			<footer className="bg-zinc-800 text-gray-500 flex flex-col w-full absolute bottom-0">
-				<div className="flex p-6 justify-around">
-					<div className="w-1/4">
+				<div className="flex p-6 justify-around max-md:flex-col">
+					<div className="w-1/4 max-md:w-full max-md:pb-8">
 						<ul>
 							<li className="pr-2">상호명 : ㈜ 현승커뮤니케이션</li>
 							<li className="">대표이사 : 김현주</li>
 						</ul>
 					</div>
-					<div className="w-1/3">
+					<div className="w-1/3 max-md:w-full">
 						<div className="w-1/2">
-							<h2>CONTACT US</h2>
+							<h2>
+								<b>CONTACT US</b>
+							</h2>
 							<hr className="opacity-50 mt-1" />
 						</div>
 						<div className="pt-4">
