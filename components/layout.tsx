@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import NavItem from './navItem'
 import { cls } from '@/libs/utils'
+import Image from 'next/image'
 
 interface LayoutProps {
 	children: React.ReactNode
@@ -27,13 +28,13 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 			<nav
 				className={cls(
 					'flex w-full items-center fixed top-0 text-base px-16 max-md:px-10 py-3 text-black box-border z-99 bg-white',
-					scroll ? 'border-b-2' : ''
+					scroll ? 'border-b-2 shadow-lg' : ''
 				)}
 			>
 				<div className="flex items-center w-1/2">
 					<div>
 						<Link href="/" className="p-3">
-							로고
+							<Image src="/hsadtech_icon.png" width={30} height={30} alt="icon" />
 						</Link>
 					</div>
 				</div>
@@ -82,7 +83,7 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 					</div>
 				</div>
 			</nav>
-			<div className={cls('pt-14 min-h-screen pb-72 max-md:pb-80')}>
+			<div className={cls('pt-20 min-h-screen pb-72 max-md:pb-80')}>
 				<div className={className}>{children}</div>
 			</div>
 			<footer className="bg-zinc-800 text-gray-500 flex flex-col w-full absolute bottom-0">
