@@ -73,7 +73,7 @@ const AboutUs = () => {
 						</AboutUsService>
 						<AboutUsService
 							title="Native AD"
-							text="페이스북, 인스타그램, 밴드 등 고요율의 SNS 전문 광고"
+							text="페이스북, 인스타그램, 밴드 등 고효율의 SNS 전문 광고"
 						>
 							<AiFillFacebook />
 						</AboutUsService>

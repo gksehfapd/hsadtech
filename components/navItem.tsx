@@ -19,11 +19,11 @@ const NavItem = ({ href, text, hoverText, onClick }: NavItemProps) => {
 			onMouseLeave={() => {
 				setIsHover(false)
 			}}
-			className="w-1/6 flex justify-center items-center whitespace-nowrap max-md:text-3xl max-md:w-3/4"
+			className="w-1/6 flex justify-center items-center whitespace-nowrap max-md:text-base max-md:w-full max-md:my-1 pl-5"
 		>
 			{href ? (
 				<Link
-					className="w-full h-full justify-center items-center flex py-1 max-md:bg-slate-200 max-md:my-4 max-md:p-4 max-md:rounded-xl"
+					className="w-full h-full justify-center items-center flex py-1 max-md:p-2 max-md:rounded-xl max-md:justify-start"
 					href={href}
 				>
 					<span className="">{isHover ? hoverText : text}</span>
@@ -31,7 +31,7 @@ const NavItem = ({ href, text, hoverText, onClick }: NavItemProps) => {
 			) : (
 				<div
 					onClick={onClick}
-					className="w-full h-full justify-center items-center flex py-1 max-md:bg-slate-200 max-md:my-4 max-md:p-4 max-md:rounded-xl cursor-pointer"
+					className="w-full h-full justify-center items-center flex py-1 max-md:p-2 max-md:rounded-xl max-md:justify-start"
 				>
 					{isHover ? hoverText : text}
 				</div>

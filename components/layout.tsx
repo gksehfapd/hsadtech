@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import NavItem from './navItem'
 import { cls } from '@/libs/utils'
 import Image from 'next/image'
+import { CiMenuBurger } from 'react-icons/ci'
 
 interface LayoutProps {
 	children: React.ReactNode
@@ -27,19 +28,19 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 		<div className="min-h-screen relative">
 			<nav
 				className={cls(
-					'flex w-full items-center fixed top-0 text-base px-16 max-md:px-10 py-3 text-black box-border z-99 bg-white',
+					'flex w-full justify-between items-center fixed top-0 text-base px-16 max-md:px-10 py-2 max-md:h-16 text-black box-border z-50 bg-white',
 					scroll ? 'border-b-2 shadow-lg' : ''
 				)}
 			>
-				<div className="flex items-center w-1/2">
+				<div className="flex items-center px-2">
 					<div>
-						<Link href="/" className="p-3">
+						<Link href="/" className="px-3">
 							<Image src="/hsadtech_icon.png" width={30} height={30} alt="icon" />
 						</Link>
 					</div>
 				</div>
 
-				<div className="flex items-center w-1/2 relative">
+				<div className="flex items-center relative min-[768px]:w-1/2">
 					<ul className="flex w-full justify-between max-md:hidden">
 						<NavItem text="Home" hoverText="홈" href="/" />
 						<NavItem text="About Us" hoverText="HS Comm" href="/aboutus" />
@@ -48,9 +49,17 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 						<NavItem text="Contact" hoverText="문의하기" href="/contactus" />
 					</ul>
 					<div className="min-[768px]:hidden w-full flex justify-between">
+						<div className="flex justify-between">
+							<div
+								className="h-14 cursor-pointer flex items-center justify-center"
+								onClick={() => setIsMenuOpen(!isMenuOpen)}
+							>
+								<CiMenuBurger className="text-xl" />
+							</div>
+						</div>
 						{isMenuOpen ? (
 							<div>
-								<ul className="flex flex-col w-full justify-between bg-white fixed top-0 right-0 py-12 items-center border-b-2">
+								<ul className="flex flex-col w-full h-full bg-white fixed top-16 right-0 items-center border-b-2">
 									<NavItem text="Home" hoverText="홈" href="/" />
 									<NavItem text="About Us" hoverText="HS Comm" href="/aboutus" />
 									<NavItem text="Affliate" hoverText="제휴" href="/affliate" />
@@ -60,32 +69,16 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 										hoverText="문의하기"
 										href="/contactus"
 									/>
-									<NavItem
-										text="X"
-										hoverText="뒤로가기"
-										onClick={() => setIsMenuOpen(false)}
-									/>
 								</ul>
 							</div>
-						) : (
-							<div className="flex w-full justify-between">
-								<div></div>
-								<div
-									className="p-4 h-14 cursor-pointer flex flex-col justify-between"
-									onClick={() => setIsMenuOpen(true)}
-								>
-									<div className="border-black border-b-4 bg-black w-6"></div>
-									<div className="border-black border-b-4 bg-black w-6"></div>
-									<div className="border-black border-b-4 bg-black w-6"></div>
-								</div>
-							</div>
-						)}
+						) : null}
 					</div>
 				</div>
 			</nav>
 			<div className={cls('pt-20 min-h-screen pb-72 max-md:pb-80')}>
 				<div className={className}>{children}</div>
 			</div>
+
 			<footer className="bg-zinc-800 text-gray-500 flex flex-col w-full absolute bottom-0">
 				<div className="flex p-6 justify-around max-md:flex-col">
 					<div className="w-1/4 max-md:w-full max-md:pb-8">
