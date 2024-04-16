@@ -75,7 +75,7 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 					</div>
 				</div>
 			</nav>
-			<div className={cls('pt-20 min-h-screen pb-72 max-md:pb-80')}>
+			<div className={cls('pt-20 min-h-screen pb-72 max-md:pb-96')}>
 				<div className={className}>{children}</div>
 			</div>
 

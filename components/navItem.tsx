@@ -25,6 +25,7 @@ const NavItem = ({ href, text, hoverText, onClick }: NavItemProps) => {
 				<Link
 					className="w-full h-full justify-center items-center flex py-1 max-md:p-2 max-md:rounded-xl max-md:justify-start"
 					href={href}
+					onClick={onClick}
 				>
 					<span className="">{isHover ? hoverText : text}</span>
 				</Link>
