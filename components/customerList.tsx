@@ -12,7 +12,10 @@ const CustomerList = ({ title, customer }: CustomerListProps) => {
 			<div className="flex w-5/6 justify-around items-center">
 				{customer.map((e) => {
 					return (
-						<div className="w-1/6 items-center justify-center text-center flex px-3 h-20">
+						<div
+							className="w-1/6 items-center justify-center text-center flex px-3 h-20"
+							key={e}
+						>
 							<span>{e}</span>
 						</div>
 					)

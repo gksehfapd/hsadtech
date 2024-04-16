@@ -12,7 +12,7 @@ const etcCustomer = ['Audi', 'NIKE', 'adidas', '듀오', '롯데제과']
 
 export default function Customer() {
 	return (
-		<Layout>
+		<Layout className="max-md:pb-60">
 			<div className="flex flex-col pb-8">
 				<span className="text-5xl text-purple-900 pb-6">Client</span>
 				<div className="flex flex-col text-xl">
@@ -32,16 +32,16 @@ export default function Customer() {
 				<CustomerList title="ETC." customer={etcCustomer}></CustomerList>
 			</div>
 			<div className="flex flex-col pb-8 text-purple-900 break-keep">
-				<span className="text-5xl pb-10">제휴마케팅을 통한 BIG 광고주 목표 달성 성과</span>
-				<div className="flex text-xl h-72">
-					<div className="w-1/2 p-2 justify-between flex flex-col items-center">
+				<span className="text-5xl pb-16">제휴마케팅을 통한 BIG 광고주 목표 달성 성과</span>
+				<div className="flex text-xl h-72 max-md:flex-col">
+					<div className="w-1/2 p-2 justify-between flex flex-col items-center max-md:w-full max-md:pb-12">
 						<span>보험 DB 게더링 캠페인 상반기 목표 실적 106% 달성!</span>
-						<div className="flex w-full justify-center text-black">
+						<div className="flex w-full justify-center text-black max-md:py-8">
 							<BsGraphUpArrow className="text-9xl" />
 						</div>
 						<span>상반기 약 80만명 보험료 조회</span>
 					</div>
-					<div className="w-1/2 p-2 justify-between flex flex-col items-center">
+					<div className="w-1/2 p-2 justify-between flex flex-col items-center max-md:w-full max-md:py-8">
 						<span>통신사 DB 수집 & 개통 목표 달성!</span>
 						<div className="flex w-full justify-center text-black">
 							<TbDatabaseShare className="text-9xl" />

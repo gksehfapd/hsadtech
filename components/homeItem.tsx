@@ -10,7 +10,7 @@ const HomeItem = ({ text, splitItem }: HomeItemProps) => {
 		<li className="flex w-full justify-around py-2">
 			<span className="w-1/3 flex justify-between">
 				{splitItemArray.map((e) => {
-					return <span>{e}</span>
+					return <span key={e}>{e}</span>
 				})}
 			</span>{' '}
 			<span className="mx-4">|</span>
