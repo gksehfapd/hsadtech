@@ -12,7 +12,7 @@ import { SiNaver } from 'react-icons/si'
 
 const AboutUs = () => {
 	return (
-		<Layout className="p-8">
+		<Layout>
 			<div className="flex flex-col pb-20 max-md:pb-10">
 				<span className="text-4xl text-purple-900 pb-2">퍼포먼스 운영 및</span>
 				<span className="text-4xl text-purple-900 pb-6">제휴 마케팅 전문 그룹</span>

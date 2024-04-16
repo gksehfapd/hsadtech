@@ -5,7 +5,7 @@ export default function Home() {
 	return (
 		<div>
 			<Layout className="flex justify-around max-md:flex-col">
-				<div className="w-full max-md:w-full p-6 flex flex-col justify-center items-center text-5xl">
+				<div className="w-full max-md:w-full flex flex-col justify-center items-center text-5xl">
 					<div className="flex flex-col text-purple-900 max-md:w-full max-md:text-4xl w-full">
 						<span>DIGITAL PERFORMANCE</span>
 						<span className="w-1/4 flex justify-center">&</span>

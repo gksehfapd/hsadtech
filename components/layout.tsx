@@ -76,7 +76,7 @@ export default function Layout({ children, className = '' }: LayoutProps) {
 				</div>
 			</nav>
 			<div className={cls('pt-20 min-h-screen pb-72 max-md:pb-96')}>
-				<div className={className}>{children}</div>
+				<div className={cls(className, 'p-8')}>{children}</div>
 			</div>
 
 			<footer className="bg-zinc-800 text-gray-500 flex flex-col w-full absolute bottom-0">

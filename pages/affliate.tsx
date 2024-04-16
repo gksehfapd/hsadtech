@@ -9,7 +9,7 @@ import { TbDeviceMobileMessage } from 'react-icons/tb'
 export default function Affliate() {
 	return (
 		<div>
-			<Layout className="p-8">
+			<Layout>
 				<div className="flex flex-col pb-20 max-md:pb-10 break-keep">
 					<span className="text-4xl items-center text-purple-900 pb-20">
 						제휴마케팅 서비스 제공

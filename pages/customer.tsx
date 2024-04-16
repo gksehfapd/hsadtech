@@ -10,7 +10,7 @@ const etcCustomer = ['Audi', 'NIKE', 'adidas', '듀오', '롯데제과']
 
 export default function Customer() {
 	return (
-		<Layout className="p-8">
+		<Layout>
 			<div className="flex flex-col pb-8">
 				<span className="text-5xl text-purple-900 pb-6">Client</span>
 				<div className="flex flex-col text-xl">
