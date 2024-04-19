@@ -12,7 +12,7 @@ const HomeItem = ({ text, splitItem }: HomeItemProps) => {
 				{splitItemArray.map((e) => {
 					return <span key={e}>{e}</span>
 				})}
-			</span>{' '}
+			</span>
 			<span className="mx-4">|</span>
 			<span className="w-2/3 break-keep">{text}</span>
 		</li>
