@@ -3,12 +3,12 @@ import Layout from '@/components/layout'
 import { BsGraphUpArrow } from 'react-icons/bs'
 import { TbDatabaseShare } from 'react-icons/tb'
 
-const financeCustomer = ['삼성화재', '메리츠화재', '우리카드', '빗썸', '신한생명']
-const mobileCustomer = ['LG U+', 'KT', '', '', '']
-const gameCustomer = ['NEXON', 'NC SOFT', 'kakao games', 'netmarble', 'com2us']
-const o2oCustomer = ['markey Kurly', 'SOCAR', '여기어때', 'Trip.', '타다']
-const eduCustomer = ['해커스어학원', '튜터링', 'PAGODA', 'YBM어학원', '자생한방병원']
-const etcCustomer = ['Audi', 'NIKE', 'adidas', '듀오', '롯데제과']
+const financeCustomer = ['samsungfire', 'meritzfire', 'wooricard', 'bithumb', 'shinhanlife']
+const mobileCustomer = ['lg', 'kt', '', '', '']
+const gameCustomer = ['nexon', 'ncsoft', 'kakaogames', 'netmarble', 'com2us']
+const o2oCustomer = ['kurly', 'socar', 'gc', 'trip', 'tada']
+const eduCustomer = ['hackers', 'tutoring', 'pagoda', 'ybm', 'jaseng']
+const etcCustomer = ['audi', 'nike', 'adidas', 'duo', 'lotte']
 
 export default function Customer() {
 	return (

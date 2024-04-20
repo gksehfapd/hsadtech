@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 interface CustomerListProps {
 	title: string
 	customer: string[]
@@ -16,7 +18,14 @@ const CustomerList = ({ title, customer }: CustomerListProps) => {
 							className="w-1/6 items-center justify-center text-center flex px-3 h-20"
 							key={e}
 						>
-							<span>{e}</span>
+							{e === '' ? null : (
+								<Image
+									src={'/icons/' + String(e) + '.png'}
+									alt={e}
+									width={100}
+									height={52}
+								/>
+							)}
 						</div>
 					)
 				})}
