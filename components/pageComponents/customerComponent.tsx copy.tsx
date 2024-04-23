@@ -31,7 +31,7 @@ const CustomerComponent = () => {
 				<CustomerList title="교육" customer={eduCustomer}></CustomerList>
 				<CustomerList title="ETC." customer={etcCustomer}></CustomerList>
 			</div>
-			<div className="flex flex-col pb-8 text-purple-900 break-keep">
+			<div className="flex flex-col pb-8 text-purple-900 break-keep max-md:pb-96">
 				<span className="text-5xl pb-16">제휴마케팅을 통한 BIG 광고주 목표 달성 성과</span>
 				<div className="flex text-xl h-72 max-md:flex-col">
 					<div className="w-1/2 p-2 justify-between flex flex-col items-center max-md:w-full max-md:pb-12">
@@ -43,7 +43,7 @@ const CustomerComponent = () => {
 					</div>
 					<div className="w-1/2 p-2 justify-between flex flex-col items-center max-md:w-full max-md:py-8">
 						<span>통신사 DB 수집 & 개통 목표 달성!</span>
-						<div className="flex w-full justify-center text-black">
+						<div className="flex w-full justify-center text-black max-md:py-8">
 							<TbDatabaseShare className="text-9xl" />
 						</div>
 						<span>일 개통신청 DB 30건 / 월 600건</span>
