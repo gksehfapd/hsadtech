@@ -1,3 +1,5 @@
+import { cls } from '@/libs/utils'
+
 interface AboutUsServiceProps {
 	text: string
 	title: string
@@ -7,9 +9,9 @@ interface AboutUsServiceProps {
 
 const AboutUsService = ({ text, title, children, fontSize = 'text-5xl' }: AboutUsServiceProps) => {
 	return (
-		<div className="flex flex-col items-center justify-around border-4 p-8">
-			<span className={fontSize}>{children}</span>
-			<span className="my-4">
+		<div className="flex flex-col items-center justify-around border-4 p-8 max-md:p-4 break-keep">
+			<span className={cls('', fontSize)}>{children}</span>
+			<span className="my-4 max-md:my-0">
 				<b>{title}</b>
 			</span>
 			<span className="text-base">{text}</span>
