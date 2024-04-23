@@ -7,7 +7,7 @@ import IndexComponent from '@/components/pageComponents/indexComponent'
 
 export default function Home() {
 	return (
-		<Layout className="flex justify-around flex-col p-20">
+		<Layout className="flex justify-around flex-col">
 			<IndexComponent />
 			<AboutusComponent />
 			<AffliateComponent />
