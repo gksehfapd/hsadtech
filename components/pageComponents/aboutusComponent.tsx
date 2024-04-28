@@ -22,7 +22,7 @@ const AboutusComponent = () => {
 					</span>
 				</div>
 			</div>
-			<div className="flex w-full justify-around text-center max-md:grid max-md:grid-cols-4 max-md:gap-y-12 max-md:gap-x-8 pb-32">
+			<div className="flex w-full justify-around text-center max-md:grid max-md:grid-cols-4 max-md:gap-y-12 max-md:gap-x-8 pb-32 max-sm:grid-cols-2 max-sm:gap-y-8 max-sm:gap-x-4 place-items-center">
 				<AboutUsItem text="Affiliate AD" />
 				<AboutUsItem text="퍼포먼스 노출형 광고" />
 				<AboutUsItem text="검색광고 (SA)" />
@@ -41,7 +41,7 @@ const AboutusComponent = () => {
 						극대화하기 위해 Integrated Performance Marketing Service를 One Stop으로
 						제공합니다
 					</span>
-					<div className="grid grid-cols-2 grid-rows-4 gap-8 content-stretch">
+					<div className="grid grid-cols-2 grid-rows-4 gap-8 content-stretch max-md:flex max-md:flex-col">
 						<AboutUsService
 							title="Affiliate AD"
 							text="고도화된 타겟팅 기반 제휴 마케팅"

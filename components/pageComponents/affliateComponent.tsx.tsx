@@ -12,7 +12,7 @@ const AffliateComponent = () => {
 				제휴마케팅 서비스 제공
 			</span>
 			<div className="flex flex-col text-xl items-center w-full  text-center">
-				<div className="flex justify-around items-center w-full">
+				<div className="flex justify-around items-center w-full bg-red-200">
 					<div className="w-1/5 flex items-center justify-center">
 						<div className="w-20 h-20 flex justify-center items-center rounded-full bg-purple-900 text-white">
 							<b>광고주</b>

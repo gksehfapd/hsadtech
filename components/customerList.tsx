@@ -20,7 +20,11 @@ const CustomerList = ({ title, customer }: CustomerListProps) => {
 						>
 							{e === '' ? null : (
 								<Image
-									src={'/icons/' + String(e) + '.png'}
+									src={
+										String(e) === 'kt'
+											? '/icons/' + String(e) + '.jpg'
+											: '/icons/' + String(e) + '.png'
+									}
 									alt={e}
 									width={100}
 									height={52}

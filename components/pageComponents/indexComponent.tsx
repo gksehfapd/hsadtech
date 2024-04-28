@@ -16,7 +16,7 @@ const IndexComponent = () => {
 						서비스하는 퍼포먼스 운영 MKT 그룹입니다.
 					</span>
 				</div>
-				<div className="w-1/2 max-md:w-full justify-center items-center flex text-lg max-md:text-base">
+				<div className="w-1/2 max-md:w-full justify-center items-center flex text-lg max-md:text-sm">
 					<ul className="flex flex-col w-full">
 						<HomeItem text="㈜HSADTECH_ADRPMALL" splitItem="회사명" />
 						<HomeItem text="광고업 및 중소기업" splitItem="업종및기업구분" />
