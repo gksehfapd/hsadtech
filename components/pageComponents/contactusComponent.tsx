@@ -67,13 +67,13 @@ const ContactusComponent = () => {
 				</div>
 				<div className="w-1/5 p-6 bg-zinc-700 justify-center items-center text-white text-base flex max-md:h-32 max-md:w-full max-md:p-0">
 					<ul className="float-none flex flex-col items-center h-full justify-around py-10 max-md:py-2 max-md:text-sm max-md:items-start">
-						<li className="py-1 max-md:py-0">
+						<li className="py-1 max-md:py-0 w-full">
 							<span className="flex items-center">
 								<span className="material-icons mr-2">near_me</span>
 								서울특별시 성동구 상원1길 25 SOL빌딩 4층
 							</span>
 						</li>
-						<li className="py-1">
+						<li className="py-1 w-full">
 							<span className="flex items-center">
 								<span className="material-icons mr-2">phone</span>
 								<div className="flex flex-col">
@@ -81,7 +81,7 @@ const ContactusComponent = () => {
 								</div>
 							</span>
 						</li>
-						<li className="py-1">
+						<li className="py-1 w-full">
 							<span className="flex items-center">
 								<span className="material-icons mr-2">mail</span>{' '}
 								hsadtech@hsadtech.com
