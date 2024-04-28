@@ -8,10 +8,12 @@ declare global {
 }
 
 const KakaoMap = () => {
+	const appKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY
+
 	useEffect(() => {
 		const kakaoMapScript = document.createElement('script')
 		kakaoMapScript.async = false
-		kakaoMapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=9db7c65d594cb91f128f2b0fbe6f5a12&autoload=false`
+		kakaoMapScript.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${appKey}&autoload=false`
 		document.head.appendChild(kakaoMapScript)
 
 		const onLoadKakaoAPI = () => {
