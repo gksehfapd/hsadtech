@@ -1,5 +1,4 @@
-import { cls } from '@/libs/utils'
-import HomeItem from '../homeItem'
+import HomeItem from '@/components/homeItem'
 
 const IndexComponent = () => {
 	return (
