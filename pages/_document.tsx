@@ -1,4 +1,5 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script'
 
 export default function Document() {
 	return (
@@ -8,10 +9,10 @@ export default function Document() {
 				href="https://fonts.googleapis.com/icon?family=Material+Icons"
 				rel="stylesheet"
 			></link>
-			<script
+			<Script
 				type="text/javascript"
 				src="//dapi.kakao.com/v2/maps/sdk.js?appkey=700d399006256f95732f06b19c046ba5"
-			></script>
+			></Script>
 			<body>
 				<Main />
 				<NextScript />
