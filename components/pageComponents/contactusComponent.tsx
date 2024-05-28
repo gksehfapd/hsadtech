@@ -2,10 +2,18 @@ import { useForm } from 'react-hook-form'
 import KakaoMap from '../map'
 
 const ContactusComponent = () => {
-	const { register, handleSubmit } = useForm()
+	const {
+		register,
+		handleSubmit,
+		watch,
+		formState: { errors }
+	} = useForm({})
 
 	const onSubmit = (data: any) => {
 		console.log(data)
+	}
+	const onInSubmit = (errors: any) => {
+		console.log(errors)
 	}
 
 	return (
@@ -16,35 +24,38 @@ const ContactusComponent = () => {
 					HS Adtech의 제휴 및 퍼포먼스 등 통합 서비스를 통한 성공적인 마케팅과 최고의
 					성과를 달성해 보세요!
 				</span>
-				<form onSubmit={handleSubmit(onSubmit)} className="flex flex-col items-center">
+				<form
+					onSubmit={handleSubmit(onSubmit, onInSubmit)}
+					className="flex flex-col items-center"
+				>
 					<input
 						type="text"
 						placeholder="회사명"
-						name="companyName"
 						className="border-2 p-3 my-2 w-full"
+						{...register('companyName', { required: '회사명은 필수 항목입니다.' })}
 					/>
 					<input
 						type="text"
 						placeholder="담당자"
-						name="clientName"
 						className="border-2 p-3 my-2 w-full"
+						{...register('clientName', { required: '담당자명은 필수 항목입니다.' })}
 					/>
 					<input
 						type="text"
 						placeholder="연락처"
-						name="clientNumber"
 						className="border-2 p-3 my-2 w-full"
+						{...register('clientNumber', { required: '연락처는 필수 항목입니다.' })}
 					/>
 					<input
 						type="text"
 						placeholder="이메일"
-						name="clientEmail"
 						className="border-2 p-3 my-2 w-full"
+						{...register('clientEmail', { required: '이메일은 필수 항목입니다.' })}
 					/>
 					<textarea
 						placeholder="문의내용"
-						name="clientText"
 						className="border-2 p-2 my-2 w-full h-96"
+						{...register('clientText', { required: '문의내용은 필수 항목입니다.' })}
 					/>
 					<input
 						type="file"
